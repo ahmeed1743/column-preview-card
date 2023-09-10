@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --orange : hsl(31, 77%, 52%);
+    --cyan : hsl(184, 100%, 22%);
+    --dark-cyan : hsl(179, 100%, 13%);
+    --white :hsla(0, 0%, 100%, 0.75);
+    --light-gray :hsl(0, 0%, 95%);
+    --font-one :'Big Shoulders Display', cursive;
+    --font-two :'Lexend Deca', sans-serif;
+}
+body{
+    min-height: 100vh;
+    font-family: var(--font-two);
+}
+.container{
+    display: flex;
+    padding: 40px;
+}
+.container .box{
+    padding: 40px;
+}
+.container .box:nth-child(1){
+    background-color: var(--orange);
+    border-radius: 10px 0px 0px 10px;
+}
+.container .box:nth-child(2){
+    background-color: var(--cyan);
+}
+.container .box:nth-child(3){
+    background-color: var(--dark-cyan);
+    border-radius: 0px 10px 10px 0px;
+}
+.container .box h1{
+    font-family: var(--font-one);
+    text-transform: uppercase;
+    font-size: 48px;
+    letter-spacing: 0px;
+    margin: 30px 0px;
+    color: var(--light-gray);
+}
+.container .box p{
+    font-size: 19px;
+    color: var(--white);
+    margin: 20px 0px;
+    line-height: 1.6;
+}
+.container .box a{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    color: var(--light-gray);
+    border: 2px solid;
+    font-size: 17px;
+    border-radius: 30px;
+    padding: 16px  30px;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.container .box a:hover{
+    background-color: white;
+    color: var(--orange);
+}
+.container .box:nth-child(2) a:hover{
+    color: var(--cyan);
+}
+.container .box:nth-child(3) a:hover{
+    color: var(--dark-cyan) ;
+}
+@media (max-width : 768px) {
+    .container{
+        flex-direction: column;
+    }
+    .container .box:nth-child(1)
+    ,.container .box:nth-child(3){
+        border-radius: 0 0 0 0;
+    }
+    .container .box a{
+        margin-top: 50px;
+    }
+    
+}
